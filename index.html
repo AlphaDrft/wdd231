@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WDD231 Course Home Page">
+    <meta name="author" content="Andrei Villapaz">
+    <title>WDD231 | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <h1 class="site-name">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" viewBox="0 0 24 24">
+                    <path stroke="#fdfdf9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5.35709 16V5.78571c0-.43393.34822-.78571.77777-.78571H18.5793c.4296 0 .7778.35178.7778.78571V16M5.35709 16h-1c-.55229 0-1 .4477-1 1v1c0 .5523.44771 1 1 1H20.3571c.5523 0 1-.4477 1-1v-1c0-.5523-.4477-1-1-1h-1M5.35709 16H19.3571M9.35709 8l2.62501 2.5L9.35709 13m4.00001 0h2" />
+                </svg>
+                <span>WDD231 - Web Frontend Development</span>
+            </h1>
+
+            <button id="menu" class="menu" aria-label="Open main menu" aria-expanded="false"
+                aria-controls="primary-nav">
+                &#9776;
+            </button>
+        </div>
+
+        <nav id="primary-nav" class="nav" aria-label="Primary">
+            <ul class="navigation">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="grid-layout">
+            <section class="about" aria-labelledby="about-title">
+                <h2 id="about-title">About Me</h2>
+                <p>
+                    Hi! My name is Andrei. I am from Cavite, Philippines. My hobbies are playing guitar, gaming, and
+                    going
+                    on adventures. I enjoy exploring new places, learning new things and living life with passion. Aside
+                    from hobbies, I value spending time with my family and friends. I believe life should be lived with
+                    balance - growing spiritually, mentally, and physically while having fun along the way.
+                </p>
+            </section>
+
+            <section class="photo" aria-labelledby="photo-title">
+                <h2 id="photo-title">Student Photo</h2>
+                <figure class="photo-placeholder">
+                    <img src="images/profile.JPG" alt="Student Photo of Andrei Villapaz" loading="lazy">
+                </figure>
+            </section>
+
+            <section class="courses" aria-labelledby="courses-title">
+                <h2 id="courses-title">Web Certificate Courses</h2>
+
+                <div class="filters" role="group" aria-label="Course filters">
+                    <button type="button" data-filter="all" class="filter-btn">All</button>
+                    <button type="button" data-filter="cse" class="filter-btn">CSE</button>
+                    <button type="button" data-filter="wdd" class="filter-btn">WDD</button>
+                </div>
+
+                <div id="course-container" class="course-list" aria-live="polite"></div>
+
+                <p class="credits">The total credits listed above is: <span id="total-credits">0</span></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Andrei Enos Flores Villapaz | Cavite, Philippines</p>
+        <div class="socials">
+            <a href="https://github.com/alphadrft" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/andrei-villapaz" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://facebook.com" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

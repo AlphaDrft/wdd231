@@ -1,0 +1,251 @@
+/* =========================
+   Base Tokens
+   ========================= */
+:root {
+  --font-body: 'Roboto', system-ui, sans-serif;
+  --font-heading: 'Merriweather', Georgia, serif;
+
+  --color-base: #fdfdf9;       /* off-white */
+  --color-accent: #8aa899;     /* sage green */
+  --color-secondary: #e6c767;  /* muted yellow */
+  --color-text: #222;
+  --color-muted: #555;
+}
+
+/* Reset helpers */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.site-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-base);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-base);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================
+   Typography
+   ========================= */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin: 0 0 .75rem;
+  color: var(--color-accent);
+}
+
+p { margin: 0 0 1rem; }
+
+/* =========================
+   Header & Navigation
+   ========================= */
+header {
+  background: var(--color-accent);
+  color: var(--color-base);
+  padding: 1rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  color: var(--color-base);
+}
+
+.menu {
+  background: none;
+  border: 2px solid var(--color-base);
+  color: var(--color-base);
+  font-size: 1.25rem;
+  padding: .25rem .5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu:focus-visible,
+.filter-btn:focus-visible,
+.navigation a:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.nav { margin-top: .75rem; }
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.navigation.show { display: grid; gap: .5rem; }
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
+  background: var(--color-secondary);
+  padding: .5rem .75rem;
+  border-radius: 6px;
+}
+
+.navigation a:hover {
+  background: #d9b84f;
+}
+
+.navigation a.active {
+  background: var(--color-accent);
+  color: var(--color-base);
+  font-weight: 700;
+}
+
+/* =========================
+   Main Layout
+   ========================= */
+main { padding: 1rem; }
+
+.about, .photo, .courses {
+  background: var(--color-base);
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+/* Section titles with background */
+.about h2,
+.photo h2,
+.courses h2 {
+  background: var(--color-secondary);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 0;
+}
+
+/* Photo block */
+.photo-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: .5rem;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+}
+
+/* Courses block */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.filter-btn {
+  flex: 1;
+  text-align: center;
+  background: var(--color-accent);
+  color: var(--color-base);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.course-list {
+  display: grid;
+  gap: .5rem;
+}
+
+.course-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef3f0;
+  border-radius: 8px;
+  padding: .6rem .8rem;
+}
+
+.course-card.completed {
+  background: #e6f7e6;
+  color: #185c1f;
+}
+
+.course-card .code { font-weight: 700; }
+.course-card .meta { color: var(--color-muted); font-size: .95rem; }
+
+.credits { 
+  font-weight: 700;
+  padding-top: 1rem;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+  background: var(--color-accent);
+  color: var(--color-base);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: block;
+}
+
+.total-note { margin: 0; }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.socials a {
+  font-size: 1.5rem;          /* icon size */
+  color: var(--color-text);   /* default color */
+  background: var(--color-secondary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  background: var(--color-accent);
+  color: var(--color-base);
+}
+

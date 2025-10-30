@@ -1,0 +1,43 @@
+@media (min-width: 960px) {
+  /* Nav: horizontal */
+  .navigation {
+    display: flex;
+    gap: .75rem;
+    flex: 1;
+  }
+
+  .navigation li { flex: 1; }
+  .navigation a { display: block; text-align: center; }
+  .menu { display: none; }
+  .nav { margin-top: 0; }
+
+  /* Grid only applies to the wrapper, not <main> */
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    grid-auto-rows: minmax(120px, auto);
+    gap: 1rem;
+    padding: 1.5rem;
+    margin: 0; /* full width */
+  }
+
+  .about { grid-column: 1; grid-row: 1; }
+  .photo  { grid-column: 2; grid-row: 1; }
+  .courses { grid-column: 1 / -1; grid-row: 2; }
+
+  /* Course list as two columns */
+  .course-list {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+
+  /* Footer */
+  footer {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  footer p { margin: 0.25rem 0; }
+}
