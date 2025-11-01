@@ -41,7 +41,7 @@ function displayCourses(list) {
   const total = list.reduce((sum, c) => sum + c.credits, 0);
   totalCreditsEl.textContent = String(total);
 
-  // Notify footer to mirror credits
+
   document.dispatchEvent(new Event("creditsUpdated"));
 }
 
