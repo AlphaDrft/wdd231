@@ -11,14 +11,14 @@
   .menu { display: none; }
   .nav { margin-top: 0; }
 
-  /* Grid only applies to the wrapper, not <main> */
+  /* Grid wrapper */
   .grid-layout {
     display: grid;
     grid-template-columns: 1.25fr 1fr;
     grid-auto-rows: minmax(120px, auto);
     gap: 1rem;
     padding: 1.5rem;
-    margin: 0; /* full width */
+    margin: 0;
   }
 
   .about { grid-column: 1; grid-row: 1; }

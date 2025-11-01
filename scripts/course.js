@@ -1,4 +1,3 @@
-// Sample course data — adjust as needed
 const courses = [
   { code: "WDD130", name: "Web Fundamentals", credits: 2, type: "wdd", completed: true },
   { code: "WDD131", name: "Web Frontend I Basics", credits: 2, type: "wdd", completed: true },

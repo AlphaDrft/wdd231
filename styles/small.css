@@ -5,14 +5,14 @@
   --font-body: 'Roboto', system-ui, sans-serif;
   --font-heading: 'Merriweather', Georgia, serif;
 
-  --color-base: #fdfdf9;       /* off-white */
-  --color-accent: #8aa899;     /* sage green */
-  --color-secondary: #e6c767;  /* muted yellow */
+  --color-base: #fdfdf9;
+  --color-accent: #8aa899;
+  --color-secondary: #e6c767;
   --color-text: #222;
   --color-muted: #555;
 }
 
-/* Reset helpers */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -176,6 +176,7 @@ main { padding: 1rem; }
   border-radius: 6px;
   padding: 0.5rem;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s;
 }
 
 .filter-btn:hover {
@@ -233,8 +234,8 @@ footer {
 }
 
 .socials a {
-  font-size: 1.5rem;          /* icon size */
-  color: var(--color-text);   /* default color */
+  font-size: 1.5rem;
+  color: var(--color-text);
   background: var(--color-secondary);
   padding: 0.5rem;
   border-radius: 50%;
