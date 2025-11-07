@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Qadra Studio",
+      "address": "Cavite City, Cavite",
+      "phone": "+63 998 545 6310",
+      "website": "https://qadra.studio/ph/cavite-city/",
+      "image": "https://qadra.studio/wp-content/uploads/2024/06/Qadra-Logo_Dark.svg",
+      "membershipLevel": 3,
+      "info": "Web and graphic design agency serving Cavite businesses."
+    },
+    {
+      "name": "ROC.PH Digital Marketing Services",
+      "address": "Dasmariñas, Cavite",
+      "phone": "+63 0898 203 7590",
+      "website": "https://roc.ph/",
+      "image": "https://roc.ph/wp-content/uploads/2024/11/logo-1024-x-1024-px-e1731394660746.png",
+      "membershipLevel": 2,
+      "info": "Local digital marketing and IT solutions provider."
+    },
+    {
+      "name": "Lyceum of the Philippines University Cavite",
+      "address": "Governor's Drive, General Trias, Cavite",
+      "phone": "+63 46 481 1400",
+      "website": "https://lpu.edu.ph/cavite/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/LPU_CAVITE.png",
+      "membershipLevel": 3,
+      "info": "Educational institution offering higher education programs."
+    },
+    {
+      "name": "De La Salle University - Dasmariñas",
+      "address": "Dasmariñas, Cavite",
+      "phone": "+63 46 481 1900",
+      "website": "https://www.dlsud.edu.ph/",
+      "image": "https://www.dlsud.edu.ph/images/logo.png",
+      "membershipLevel": 3,
+      "info": "Premier university in Cavite offering diverse academic programs."
+    },
+    {
+      "name": "Kolehiyo ng Lungsod ng Dasmariñas",
+      "address": "Brgy. Burol, City of Dasmariñas",
+      "phone": "admissionandtesting@kld.edu.ph",
+      "website": "https://www.kld.edu.ph/",
+      "image": "https://www.kld.edu.ph/wp-content/uploads/2023/10/kldlogo.png",
+      "membershipLevel": 1,
+      "info": "A local city college that provides high quality education and opportunities."
+    },
+    {
+      "name": "Cavite Export Processing Zone (PEZA)",
+      "address": "Rosario, Cavite",
+      "phone": "+63 46 402 1007",
+      "website": "https://www.peza.gov.ph/",
+      "image": "https://www.peza.gov.ph/sites/default/files/logo-main2.jpg",
+      "membershipLevel": 2,
+      "info": "Government-run export zone supporting manufacturing and logistics."
+    },
+    {
+      "name": "Ayala Malls District Cavite",
+      "address": "Molino-Paliparan Road, Brgy. Salawag, Dasmarinas City, Cavite",
+      "phone": "+63 46 506 6168",
+      "website": "https://www.ayalamalls.com/",
+      "image": "https://api.ayalamalls.com/api/cms-content/resources/image/wc-cms-2019-10-30-12:59:13.636.png",
+      "membershipLevel": 1,
+      "info": "Retail and lifestyle hub serving Cavite residents and businesses."
+    }
+  ]
+}
