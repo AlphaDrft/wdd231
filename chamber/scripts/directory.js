@@ -1,3 +1,13 @@
+// Menu toggle
+const hamburger = document.getElementById("hamburger");
+const menuPanel = document.getElementById("menu-panel");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = menuPanel.classList.toggle("open");
+  hamburger.setAttribute("aria-expanded", isOpen);
+  hamburger.textContent = isOpen ? "✖" : "☰";
+});
+
 async function loadMembers() {
   try {
     const response = await fetch("data/members.json");
