@@ -72,14 +72,12 @@ document.getElementById("grid-view").addEventListener("click", () => {
   const container = document.getElementById("members-container");
   container.classList.add("grid");
   container.classList.remove("list");
-  displayMembers(window.membersData, "grid");
 });
 
 document.getElementById("list-view").addEventListener("click", () => {
   const container = document.getElementById("members-container");
   container.classList.add("list");
   container.classList.remove("grid");
-  displayMembers(window.membersData, "list");
 });
 
 loadMembers();
