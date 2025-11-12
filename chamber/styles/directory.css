@@ -492,20 +492,15 @@ h1 {
 
 /* List view adjustments */
 #members-container.list .member-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
 }
 
 #members-container.list .member-card img {
-  width: 80px;
-  height: 80px;
-  margin: 0;
-  object-fit: contain;
-  flex-shrink: 0;
+  display: none;
 }
 
 #members-container.list .member-card div {
@@ -513,7 +508,7 @@ h1 {
 }
 
 #members-container.list .member-card h3 {
-  margin-top: 0;
+  margin: 0;
   font-family: var(--font-heading);
   color: var(--color-primary);
 }
@@ -523,6 +518,12 @@ h1 {
   margin: 0.75rem 0;
 }
 
+@media (max-width: 768px) {
+  #members-container.list .member-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
 /* Footer */
 footer {
   background-color: var(--color-primary);
