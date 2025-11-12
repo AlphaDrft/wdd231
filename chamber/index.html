@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business directory of Cavite Chamber of Commerce members.">
+    <meta name="author" content="Andrei Enos Flores Villapaz">
+    <title>Cavite Chamber of Commerce | Directory</title>
+
+    <meta property="og:title" content="Cavite Chamber of Commerce Home">
+    <meta property="og:description" content="Empowering businesses and strengthening communities in Cavite.">
+    <meta property="og:image" content="https://alphadrft.github.io/wdd231/chamber/images/chamber-logo.svg">
+    <meta property="og:url" content="https://alphadrft.github.io/wdd231/chamber/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="images/chamber-logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header>
+        <div class="site-name">
+            <svg width="48px" height="48px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2 2h14v4h6v16H2V2zm18 6h-4v2h2v2h-2v2h2v2h-2v2h2v2h2V8zm-6-4H4v16h2v-2h6v2h2V4zM6 6h2v2H6V6zm6 0h-2v2h2V6zm-6 4h2v2H6v-2zm6 0h-2v2h2v-2zm-6 4h2v2H6v-2zm6 0h-2v2h2v-2z"
+                    fill="#FFF" />
+            </svg>
+            <span>Cavite Chamber of Commerce</span>
+
+            <button id="hamburger" aria-label="Menu" aria-expanded="false">
+                &#9776;
+            </button>
+        </div>
+
+        <div id="menu-panel">
+            <nav id="primary-nav" aria-label="Primary">
+                <ul class="navigation">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Cavite Chamber of Commerce banner" class="hero-img" loading="lazy">
+            <div class="hero-text">
+                <h1>Welcome to the Cavite Chamber of Commerce</h1>
+                <p>Empowering businesses and strengthening communities in Cavite.</p>
+                <a href="join.html" class="cta-button">Join Us</a>
+            </div>
+        </section>
+
+        <section class="events">
+            <h2>Current Events</h2>
+            <article>
+                <h3>Cavite Business Expo 2025</h3>
+                <p>📅 November 20-22, 2025 — Imus Convention Center</p>
+                <p>Meet Cavite's top entrepreneurs, investors, and innovators in our annual business expo.</p>
+            </article>
+            <article>
+                <h3>Holiday Networking Gala</h3>
+                <p>📅 December 10, 2025 — Bayleaf Hotel Cavite</p>
+                <p>Celebrate success and make new connections in a night of inspiration and collaboration.</p>
+            </article>
+        </section>
+
+        <section class="weather-grid">
+            <div class="current-weather">
+                <h2>Current Weather</h2>
+                <div class="weather-card">
+                    <figure>
+                        <img id="weather-icon"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            alt="Weather icon" loading="lazy">
+                        <figcaption id="weather-desc"></figcaption>
+                    </figure>
+                    <p id="current-temp">--°C</p>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h2>3-Day Forecast</h2>
+                <div id="forecast-container" class="forecast-grid"></div>
+            </div>
+        </section>
+
+
+
+
+        <section class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Andrei Enos Flores Villapaz | Cavite, Philippines</p>
+        <div class="socials">
+            <a href="https://github.com/alphadrft" target="_blank" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.3-1.1.6-1.4-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.1-3.1-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3.1 1.1a10.7 10.7 0 0 1 5.6 0c2.2-1.4 3.1-1.1 3.1-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.7.9.7 1.9v2.8c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                </svg>
+            </a>
+
+            <a href="https://linkedin.com/in/andrei-villapaz" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M20.45 20.45h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7h-3.6V9h3.5v1.6h.1c.5-1 1.8-2.1 3.7-2.1 4 0 4.7 2.6 4.7 6v5.9ZM5.34 7.43a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2Zm1.8 13.02h-3.6V9h3.6v11.45Z" />
+                </svg>
+            </a>
+
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M22.68 12c0-5.9-4.78-10.68-10.68-10.68S1.32 6.1 1.32 12c0 5.3 3.87 9.7 8.9 10.6v-7.5H7.9v-3.1h2.3V9.8c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .1 2.3.1v2.6h-1.3c-1.2 0-1.6.7-1.6 1.5v1.9h2.8l-.5 3.1h-2.3v7.5c5-.9 8.9-5.3 8.9-10.6Z" />
+                </svg>
+            </a>
+        </div>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/date.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+
+</html>

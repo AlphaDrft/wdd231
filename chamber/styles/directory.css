@@ -11,8 +11,15 @@
   --color-border: #d1d5db;    /* for dividers */
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -94,6 +101,266 @@ nav a.active {
   color: var(--color-secondary);
 }
 
+/* === Home Page Styles === */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 55vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #f9fafb;
+}
+
+.cta-button {
+  background-color: var(--color-secondary);
+  color: #111827;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #d97706;
+}
+
+
+/* PROBLEM OVERLAPPING HERO-TEXT TO EVENTS IN SMALLER SCREENS*/
+@media (max-width: 768px) {
+  .hero {
+    min-height: 45vh;
+    padding: 1rem;
+  }
+
+  .hero-text {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .cta-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 40vh;
+  }
+
+  .hero-text {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero .cta-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+/* Events Section */
+.events {
+  margin-bottom: 2rem;
+}
+
+.events h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.events article {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.events article h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.events article p {
+  margin: 0.3rem 0;
+}
+
+/* Weather Section */
+.weather-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.current-weather, .forecast {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.current-weather h2, .forecast h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.forecast-grid div {
+  background-color: #f9fafb;;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .weather-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather img {
+  width: 80px;
+  height: 80px;
+}
+
+#current-temp {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+#weather-desc {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+/* Spotlights Section */
+.spotlights {
+  margin-bottom: 2rem;
+}
+
+.spotlights h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+#spotlight-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.spotlight-card {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spotlight-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-card h3 {
+  margin: 0.5rem 0;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+}
+
+.spotlight-card p,
+.spotlight-card a {
+  margin: 0.3rem 0;
+  text-align: center;
+}
+
+.spotlight-card a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.spotlight-card a:hover {
+  color: var(--color-secondary);
+}
+
+
 /* Navigation */
 @media (max-width: 600px) {
     #hamburger {
@@ -109,6 +376,8 @@ nav a.active {
         display: none;
         background-color: var(--color-primary);
         padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     #menu-panel.open {
@@ -119,6 +388,7 @@ nav a.active {
       flex-direction: column;
       gap: 0.75rem;
       align-items: center;
+      width: 100%;
     }
 
     #menu-panel nav li {
