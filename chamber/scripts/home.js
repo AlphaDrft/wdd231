@@ -9,7 +9,7 @@ hamburger.addEventListener("click", () => {
 });
 
 // ==================== WEATHER SECTION ====================
-const apiKey = "ab4a70c382402fdf8855b80e436ef0b6"; // your API key
+const apiKey = "ab4a70c382402fdf8855b80e436ef0b6";
 const lat = 14.323767;
 const lon = 120.973783;
 const units = "metric";
@@ -41,7 +41,7 @@ async function getWeatherForecast() {
     const current = data.list[0];
     displayCurrentWeather(current);
 
-    // 3-day forecast (pick one per day at noon, approx)
+    // 3-day forecast
     const daily = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(1, 4);
     displayForecast(daily);
 
@@ -65,7 +65,7 @@ function displayCurrentWeather(data) {
 }
 
 function displayForecast(daily) {
-  forecastContainer.innerHTML = ""; // clear previous
+  forecastContainer.innerHTML = "";
   daily.forEach(day => {
     const date = new Date(day.dt_txt);
     const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
@@ -118,7 +118,7 @@ async function loadSpotlights() {
 }
 
 function getMembershipLevel(level) {
-  switch(level) {
+  switch (level) {
     case 1: return "Member";
     case 2: return "Silver";
     case 3: return "Gold";

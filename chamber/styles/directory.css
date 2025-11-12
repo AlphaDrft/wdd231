@@ -8,7 +8,8 @@
   --font-heading: "Merriweather", serif;
   --font-body: "Roboto", sans-serif;
 
-  --color-border: #d1d5db;    /* for dividers */
+  --color-border: #d1d5db;
+  /* for dividers */
 }
 
 * {
@@ -17,7 +18,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   overflow-x: hidden;
 }
@@ -35,21 +37,21 @@ body {
 
 /* Header */
 header {
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .site-name {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
 }
 
 #hamburger {
@@ -130,7 +132,7 @@ nav a.active {
 .hero-text {
   position: relative;
   z-index: 2;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
   border-radius: 10px;
   max-width: 90%;
@@ -164,8 +166,6 @@ nav a.active {
   background-color: #d97706;
 }
 
-
-/* PROBLEM OVERLAPPING HERO-TEXT TO EVENTS IN SMALLER SCREENS*/
 @media (max-width: 768px) {
   .hero {
     min-height: 45vh;
@@ -214,6 +214,7 @@ nav a.active {
     font-size: 0.85rem;
   }
 }
+
 /* Events Section */
 .events {
   margin-bottom: 2rem;
@@ -231,7 +232,7 @@ nav a.active {
   margin-bottom: 1rem;
   border-radius: 8px;
   border: 1px solid var(--color-border);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .events article h3 {
@@ -251,14 +252,16 @@ nav a.active {
   margin: 2rem 0;
 }
 
-.current-weather, .forecast {
+.current-weather,
+.forecast {
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.current-weather h2, .forecast h2 {
+.current-weather h2,
+.forecast h2 {
   font-family: var(--font-heading);
   color: var(--color-primary);
 }
@@ -271,7 +274,8 @@ nav a.active {
 }
 
 .forecast-grid div {
-  background-color: #f9fafb;;
+  background-color: #f9fafb;
+  ;
   padding: 0.5rem;
   border-radius: 8px;
   text-align: center;
@@ -282,6 +286,7 @@ nav a.active {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 .weather-card {
   display: flex;
   flex-direction: column;
@@ -326,7 +331,7 @@ nav a.active {
   border: 1px solid var(--color-border);
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -363,38 +368,38 @@ nav a.active {
 
 /* Navigation */
 @media (max-width: 600px) {
-    #hamburger {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #fff;
-        cursor: pointer;
-    }
+  #hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
 
-    #menu-panel {
-        display: none;
-        background-color: var(--color-primary);
-        padding: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
+  #menu-panel {
+    display: none;
+    background-color: var(--color-primary);
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    #menu-panel.open {
-        display: block;
-    }
+  #menu-panel.open {
+    display: block;
+  }
 
-    #menu-panel nav ul {
-      flex-direction: column;
-      gap: 0.75rem;
-      align-items: center;
-      width: 100%;
-    }
+  #menu-panel nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    width: 100%;
+  }
 
-    #menu-panel nav li {
-      width: 100%;
-      text-align: center;
-    }
+  #menu-panel nav li {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Main content */
@@ -448,7 +453,7 @@ h1 {
   border: 1px solid var(--color-border);
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .member-card img {
@@ -474,7 +479,7 @@ h1 {
 }
 
 .member-card:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-color: var(--color-secondary);
 }
 
