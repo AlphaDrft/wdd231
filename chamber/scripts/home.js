@@ -1,13 +1,3 @@
-// scripts/home.js
-
-// MENU TOGGLE
-const hamburger = document.getElementById("hamburger");
-const menuPanel = document.getElementById("menu-panel");
-hamburger.addEventListener("click", () => {
-  const open = menuPanel.classList.toggle("open");
-  hamburger.textContent = open ? "✖" : "☰";
-});
-
 // ==================== WEATHER SECTION ====================
 const apiKey = "ab4a70c382402fdf8855b80e436ef0b6";
 const lat = 14.323767;
@@ -116,17 +106,6 @@ async function loadSpotlights() {
     console.error("Spotlight load error:", error);
   }
 }
-
-function getMembershipLevel(level) {
-  switch (level) {
-    case 1: return "Member";
-    case 2: return "Silver";
-    case 3: return "Gold";
-    default: return "Unknown";
-  }
-}
-
-loadSpotlights();
 
 
 function displayBanner() {
