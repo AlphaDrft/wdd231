@@ -14,5 +14,3 @@ function getMembershipLevel(level) {
     default: return "Unknown";
   }
 }
-
-loadSpotlights();

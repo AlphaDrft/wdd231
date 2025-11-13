@@ -107,6 +107,7 @@ async function loadSpotlights() {
   }
 }
 
+loadSpotlights();
 
 function displayBanner() {
   const banner = document.getElementById('banner');

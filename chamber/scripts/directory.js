@@ -47,16 +47,6 @@ function displayMembers(members, view = "grid") {
   });
 }
 
-// Membership level mapping
-function getMembershipLevel(level) {
-  switch (level) {
-    case 1: return "Member";
-    case 2: return "Silver";
-    case 3: return "Gold";
-    default: return "Unknown";
-  }
-}
-
 // Toggle buttons
 document.getElementById("grid-view").addEventListener("click", () => {
   const container = document.getElementById("members-container");
