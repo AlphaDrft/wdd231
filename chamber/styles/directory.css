@@ -401,6 +401,33 @@ nav a.active {
   }
 }
 
+/* Banner */
+#banner {
+    display: none;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1rem;
+    font-weight: 500;
+    position: relative;
+}
+
+#banner p {
+    margin: 0;
+    padding-right: 2rem;
+}
+
+#closeBanner {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 /* Main content */
 main {
   padding: 1rem;

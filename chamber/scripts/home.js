@@ -127,3 +127,25 @@ function getMembershipLevel(level) {
 }
 
 loadSpotlights();
+
+
+function displayBanner() {
+  const banner = document.getElementById('banner');
+  if (!banner) return;
+
+  const today = new Date().getDay();
+
+  if (today === 1 || today === 2) {
+    banner.style.display = 'block';
+    banner.innerHTML = `
+            <p>Join our Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.!</p>
+            <button id="closeBanner">❌</button>
+        `;
+
+    document.getElementById('closeBanner').addEventListener('click', () => {
+      banner.style.display = 'none';
+    })
+  }
+}
+
+displayBanner();
