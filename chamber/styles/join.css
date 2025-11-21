@@ -1,4 +1,6 @@
-h1 {
+/* Thank you Page */
+
+h1, h2 {
   font-family: var(--font-heading);
   color: var(--color-primary);
   margin-bottom: 1rem;
