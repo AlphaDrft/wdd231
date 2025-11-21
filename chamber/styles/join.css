@@ -10,6 +10,11 @@ main {
   flex: 1;
 }
 
+p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 /* Form Styles - Join Page */
 form {
   max-width: 800px;
