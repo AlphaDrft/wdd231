@@ -1,0 +1,236 @@
+h1 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+  flex: 1;
+}
+
+/* Form Styles - Join Page */
+form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+fieldset label input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Thank you Page */
+#summary {
+  background-color: #f9fafb;
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+#summary ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#summary li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+#summary li strong {
+  color: var(--color-primary);
+}
+
+@media (max-width: 600px) {
+  form {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* === Membership Cards === */
+.membership-cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.membership-card {
+  position: relative;
+  border: 3px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.membership-card:hover {
+  border-color: var(--color-secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.membership-card input[type="radio"] {
+  display: none;
+}
+
+.membership-card.selected-card {
+  border-color: var(--color-primary);
+}
+
+.card-clickable-area {
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.membership-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.membership-description {
+  display: block;
+  font-size: 1rem;
+}
+
+.membership-card .modal-trigger {
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+/* Responsive layout for cards */
+@media (min-width: 768px) {
+  .membership-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .membership-cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal.is-visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
