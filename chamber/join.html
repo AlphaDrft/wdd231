@@ -72,38 +72,41 @@
             <fieldset>
                 <legend>Membership Level</legend>
                 <div class="membership-cards-container">
-                    <label class="membership-card">
-                        <input type="radio" name="membership" value="np" required>
-                        <div class="card-content">
-                            <h3>NP Membership</h3>
-                            <p>(Non-Profit)</p>
-                            <button type="button" class="modal-trigger" data-modal="np-modal">See Benefits</button>
-                        </div>
-                    </label>
-                    <label class="membership-card">
-                        <input type="radio" name="membership" value="bronze">
-                        <div class="card-content">
-                            <h3>Bronze Membership</h3>
-                            <p>For small businesses.</p>
-                            <button type="button" class="modal-trigger" data-modal="bronze-modal">See Benefits</button>
-                        </div>
-                    </label>
-                    <label class="membership-card">
-                        <input type="radio" name="membership" value="silver">
-                        <div class="card-content">
-                            <h3>Silver Membership</h3>
-                            <p>For growing businesses.</p>
-                            <button type="button" class="modal-trigger" data-modal="silver-modal">See Benefits</button>
-                        </div>
-                    </label>
-                    <label class="membership-card">
-                        <input type="radio" name="membership" value="gold">
-                        <div class="card-content">
-                            <h3>Gold Membership</h3>
-                            <p>For established businesses.</p>
-                            <button type="button" class="modal-trigger" data-modal="gold-modal">See Benefits</button>
-                        </div>
-                    </label>
+                    <div class="membership-card">
+                        <input type="radio" id="np-radio" name="membership" value="np" required>
+                        <label for="np-radio" class="card-clickable-area">
+                            <span class="membership-title">NP Membership</span>
+                            <span class="membership-description">(Non-Profit)</span>
+                        </label>
+                        <button type="button" class="modal-trigger" data-modal="np-modal">See Benefits</button>
+                    </div>
+
+                    <div class="membership-card">
+                        <input type="radio" id="bronze-radio" name="membership" value="bronze">
+                        <label for="bronze-radio" class="card-clickable-area">
+                            <span class="membership-title">Bronze Membership</span>
+                            <span class="membership-description">For small businesses.</span>
+                        </label>
+                        <button type="button" class="modal-trigger" data-modal="bronze-modal">See Benefits</button>
+                    </div>
+
+                    <div class="membership-card">
+                        <input type="radio" id="silver-radio" name="membership" value="silver">
+                        <label for="silver-radio" class="card-clickable-area">
+                            <span class="membership-title">Silver Membership</span>
+                            <span class="membership-description">For growing businesses.</span>
+                        </label>
+                        <button type="button" class="modal-trigger" data-modal="silver-modal">See Benefits</button>
+                    </div>
+
+                    <div class="membership-card">
+                        <input type="radio" id="gold-radio" name="membership" value="gold">
+                        <label for="gold-radio" class="card-clickable-area">
+                            <span class="membership-title">Gold Membership</span>
+                            <span class="membership-description">For established businesses.</span>
+                        </label>
+                        <button type="button" class="modal-trigger" data-modal="gold-modal">See Benefits</button>
+                    </div>
                 </div>
             </fieldset>
 

@@ -655,12 +655,15 @@ input[type="submit"]:hover {
 }
 
 .membership-card {
+  position: relative;
   border: 3px solid var(--color-border);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
-  cursor: pointer;
   transition: border-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .membership-card:hover {
@@ -676,19 +679,34 @@ input[type="submit"]:hover {
   border-color: var(--color-primary);
 }
 
-.card-content h3 {
-  margin: 0 0 0.5rem 0;
-  color: var(--color-primary);
+.card-clickable-area {
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
-.card-content .modal-trigger {
-  margin-top: 1rem;
+.membership-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.membership-description {
+  display: block;
+  font-size: 1rem;
+}
+
+.membership-card .modal-trigger {
+  margin-top: auto;
   background: none;
   border: none;
   color: var(--color-primary);
   text-decoration: underline;
   cursor: pointer;
   font-size: 1rem;
+  padding: 0.5rem;
 }
 
 /* Responsive layout for cards */
