@@ -12,11 +12,6 @@ main {
   flex: 1;
 }
 
-p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
 /* Form Styles - Join Page */
 form {
   max-width: 800px;
@@ -46,7 +41,7 @@ label {
   display: block;
   margin-bottom: 1rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--color-text-medium);
 }
 
 input[type="text"],
@@ -93,6 +88,14 @@ input[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
+@media (max-width: 600px) {
+  form {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+
 /* Thank you Page */
 #summary {
   background-color: #f9fafb;
@@ -116,12 +119,6 @@ input[type="submit"]:hover {
   color: var(--color-primary);
 }
 
-@media (max-width: 600px) {
-  form {
-    margin: 1rem;
-    padding: 1rem;
-  }
-}
 
 /* === Membership Cards === */
 .membership-cards-container {
@@ -185,19 +182,6 @@ input[type="submit"]:hover {
   padding: 0.5rem;
 }
 
-/* Responsive layout for cards */
-@media (min-width: 768px) {
-  .membership-cards-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .membership-cards-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -240,4 +224,18 @@ input[type="submit"]:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+/* Responsive layout for cards */
+@media (min-width: 768px) {
+  .membership-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .membership-cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
