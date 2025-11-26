@@ -1,6 +1,7 @@
 /* Root variables for consistency */
 :root {
   --color-primary: #1E3A8A;
+  --color-primary-hover: #2A4EAA;
   --color-secondary: #F59E0B;
   --color-background: #F9FAFB;
   --color-text-dark: #111827;
@@ -10,9 +11,9 @@
   --font-body: "Roboto", sans-serif;
 
   --color-border: #d1d5db;
-  /* for dividers */
   --color-light: #fff;
   --color-dark-transparent: rgba(0, 0, 0, 0.7);
+  --shadow-light: rgba(0,0,0,0.1);
 }
 
 * {
@@ -33,7 +34,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--color-background);
-  color: var(--color-text);
+  color: var(--color-text-dark);
   font-family: var(--font-body);
   line-height: 1.6;
 }
@@ -66,7 +67,7 @@ header .site-name {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #fff;
+  color: var(--color-light);
   cursor: pointer;
   display: none;
 }
@@ -99,7 +100,7 @@ nav li {
 nav a {
   display: block;
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: var(--color-light);
   text-decoration: none;
   font-weight: 500;
   font-family: var(--font-body);
@@ -118,7 +119,7 @@ nav a.active {
     background: none;
     border: none;
     font-size: 2rem;
-    color: #fff;
+    color: var(--color-light);
     cursor: pointer;
   }
 
@@ -151,7 +152,7 @@ nav a.active {
 /* Footer */
 footer {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-light);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
@@ -184,6 +185,6 @@ footer p {
 
 .socials a:hover {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-light);
 
 }

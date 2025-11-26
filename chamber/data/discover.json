@@ -1,0 +1,60 @@
+{
+  "locations": [
+    {
+      "title": "Taal Volcano Viewpoint",
+      "address": "Tagaytay Ridge, Tagaytay City",
+      "description": "Offering breathtaking panoramic views of the famous Taal Volcano and Lake, a must-visit scenic spot in Cavite.",
+      "photo": "images/discover-1.webp",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Taal_Volcano"
+    },
+    {
+      "title": "Aguinaldo Shrine",
+      "address": "Kaingen, Kawit, Cavite",
+      "description": "The historic site of the Proclamation of Philippine Independence on June 12, 1898. A national shrine and museum.",
+      "photo": "images/discover-2.webp",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Aguinaldo_Shrine"
+    },
+    {
+      "title": "Corregidor Island",
+      "address": "Manila Bay, Cavite",
+      "description": "A historic island fortress with well-preserved barracks, secret tunnels, and artillery from World War II.",
+      "photo": "images/discover-3.webp",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Corregidor_Island"
+    },
+    {
+      "title": "Balite Falls",
+      "address": "Amadeo, Cavite",
+      "description": "A serene natural destination featuring cool, cascading freshwater falls surrounded by lush, tropical greenery.",
+      "photo": "images/discover-4.webp",
+      "learnMoreUrl": "https://www.tripadvisor.com/Attraction_Review-g2140517-d2139417-Reviews-Balite_Falls-Amadeo_Cavite_Province_Calabarzon_Region_Luzon.html"
+    },
+    {
+      "title": "Imus Cathedral",
+      "address": "Imus, Cavite",
+      "description": "A historic Roman Catholic cathedral known for its beautiful baroque architecture and significant cultural heritage.",
+      "photo": "images/discover-5.webp",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Imus_Cathedral"
+    },
+    {
+      "title": "Sky Ranch Tagaytay",
+      "address": "Tagaytay-Nasugbu Highway, Tagaytay City",
+      "description": "A popular amusement park featuring the giant Sky Eye Ferris wheel, offering stunning views of Taal Lake.",
+      "photo": "images/discover-6.webp",
+      "learnMoreUrl": "https://www.skyranch.com.ph/skyranch-tagaytay"
+    },
+    {
+      "title": "Pico de Loro",
+      "address": "Ternate, Cavite",
+      "description": "A dormant volcano and popular hiking destination, known for its iconic monolith and panoramic summit views.",
+      "photo": "images/discover-7.webp",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Mount_Pico_de_Loro"
+    },
+    {
+      "title": "Sangley Point",
+      "address": "Cavite City",
+      "description": "A historic naval station and developing international airport, playing a key role in the region's commerce and history.",
+      "photo": "images/discover-8.webp",
+      "learnMoreUrl": "https://en.wikipedia.org/wiki/Naval_Station_Sangley_Point"
+    }
+  ]
+}
