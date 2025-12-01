@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summoner's Index - League of Legends Champions</title>
+    <meta name="description"
+        content="A fast and modern roster of all champions from League of Legends. Browse, search, and track your favorites.">
+    <meta name="author" content="Andrei Enos Flores Villapaz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/filter.css">
+    <link rel="icon" href="images/index-logo.svg" type="image/svg+xml">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="site-branding">
+                <img src="images/index-logo.svg" alt="Summoner's Index Logo">
+                <h1>Summoner's Index</h1>
+            </a>
+            <nav id="main-nav">
+                <div id="hamburger-btn" class="hamburger" aria-label="Open navigation menu" role="button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <main>
+            <div id="role-filters" class="role-filters"></div>
+            <h2 class="section-title">
+                Champion Roster
+                <button id="filter-favorites-btn" class="filter-btn">Show Favorites</button>
+            </h2>
+            <div id="champion-grid" class="champion-grid"></div>
+            <div id="modal-container" class="modal-container">
+                <div id="modal" class="modal">
+                    <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+                    <div id="modal-content" class="modal-content"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; <span id="current-year"></span> &bull; Summoner's Index &bull; WDD 213 Project</p>
+            <p class="disclaimer">This site is a student project and is not affiliated with Riot Games.</p>
+        </footer>
+</body>
+
+</html>

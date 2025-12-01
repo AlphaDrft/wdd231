@@ -1,0 +1,376 @@
+/* === CSS RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === CSS VARIABLES === */
+:root {
+    --primary-bg: #0a1018;
+    --accent-gold: #c89b3c;
+    --text-color: #f0e6d2;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* === GENERAL STYLING === */
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* === HEADER & NAVIGATION === */
+header {
+    background-color: #010a13;
+    border-bottom: 3px solid var(--accent-gold);
+    overflow-x: hidden;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.site-branding img {
+    height: 40px;
+}
+
+.site-branding h1 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+#nav-links a:hover,
+#nav-links a.active {
+    border-bottom-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+/* === MAIN CONTENT === */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--accent-gold);
+    color: var(--primary-bg);
+}
+
+/* === CHAMPION GRID & CARDS === */
+.champion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.champion-card {
+    position: relative;
+    background-color: #010a13;
+    border: 1px solid var(--accent-gold);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    opacity: 0;
+    animation: fadeInCard 0.5s forwards;
+}
+
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+    }
+}
+
+.champion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(200, 155, 60, 0.3);
+    cursor: pointer;
+}
+
+.champion-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.champion-card .card-info {
+    padding: 1rem;
+}
+
+.champion-card h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.champion-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-transform: capitalize;
+}
+
+.champion-card .favorite-indicator {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    text-shadow: 0 0 5px black;
+}
+
+.champion-card.is-favorite .favorite-indicator {
+    display: block;
+}
+
+/* === MODAL STYLING === */
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.active {
+    display: flex;
+}
+
+.modal {
+    background-color: var(--primary-bg);
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid var(--accent-gold);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    color: var(--accent-gold);
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+    font-family: var(--font-heading);
+    color: var(--accent-gold);
+    text-align: center;
+}
+
+.modal-content h3 {
+    text-align: center;
+    color: #ccc;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.favorite-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--primary-bg);
+    background-color: var(--accent-gold);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.favorite-btn:hover {
+    background-color: #fff;
+}
+
+.favorite-btn.is-favorite {
+    background-color: #888;
+    color: #eee;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid #222;
+}
+
+footer .disclaimer {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* === RESPONSIVE EXPANDING NAVIGATION (FINAL, POLISHED V2) === */
+
+/* --- The Animated Hamburger Icon --- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- The Mobile Navigation Menu --- */
+@media (max-width: 768px) {
+    .header-content {
+        /* Reduce padding to give content more room */
+        padding: 1rem 1rem;
+    }
+
+    /* Make the title font smaller to fit on mobile */
+    .site-branding h1 {
+        font-size: 1.5rem; /* Reduced from 2rem */
+        letter-spacing: 1px; /* Slightly reduce letter spacing */
+    }
+
+    /* Ensure the hamburger button doesn't shrink */
+    .hamburger {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    #nav-links {
+        list-style: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    #nav-links li {
+        padding: 1rem 0;
+        border-top: 1px solid #222;
+        width: 100%;
+    }
+    
+    #nav-links a {
+        font-size: 1.2rem;
+    }
+
+    /* --- ACTIVE STATE (when menu is open) --- */
+
+    body.nav-open .hamburger .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    body.nav-open .hamburger .bar:nth-child(2) { opacity: 0; }
+    body.nav-open .hamburger .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    body.nav-open #nav-links {
+        max-height: 500px;
+    }
+}

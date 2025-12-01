@@ -1,0 +1,71 @@
+/* === ROLE FILTER STYLING === */
+.role-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.role-filter-btn {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #444;
+    color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.role-filter-btn:hover {
+    background-color: #222;
+    border-color: #666;
+}
+
+.role-filter-btn.active {
+    background-color: var(--accent-gold);
+    color: var(--primary-bg);
+    border-color: var(--accent-gold);
+    font-weight: bold;
+}
+
+/* === ENHANCED CHAMPION CARD UI === */
+.card-role {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
+.card-difficulty {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.difficulty-bar {
+    display: flex;
+    gap: 2px;
+    width: 50px; /* Fixed width for the bar */
+    height: 8px;
+    margin: 4px auto 0;
+}
+
+.difficulty-bar span {
+    flex-grow: 1;
+    background-color: #444; /* Default inactive color */
+}
+
+/* Color the bars based on difficulty level */
+.difficulty-bar.low span:nth-child(1) {
+    background-color: var(--accent-gold);
+}
+.difficulty-bar.moderate span:nth-child(-n+2) {
+    background-color: var(--accent-gold);
+}
+.difficulty-bar.high span:nth-child(-n+3) {
+    background-color: var(--accent-gold);
+}
