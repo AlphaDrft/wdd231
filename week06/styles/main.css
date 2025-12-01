@@ -96,6 +96,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* === FAVORITES FILTER STYLING === */
 .filter-btn {
     font-family: var(--font-body);
     font-size: 0.9rem;
@@ -293,6 +294,7 @@ main {
     color: #eee;
 }
 
+
 /* === FOOTER === */
 footer {
     text-align: center;
@@ -307,14 +309,14 @@ footer .disclaimer {
     margin-top: 0.5rem;
 }
 
-/* === RESPONSIVE EXPANDING NAVIGATION (FINAL, POLISHED V2) === */
+/* === RESPONSIVE EXPANDING NAVIGATION === */
 
-/* --- The Animated Hamburger Icon --- */
 .hamburger {
     display: none;
     cursor: pointer;
     z-index: 1001;
 }
+
 .hamburger .bar {
     display: block;
     width: 25px;
@@ -327,17 +329,14 @@ footer .disclaimer {
 /* --- The Mobile Navigation Menu --- */
 @media (max-width: 768px) {
     .header-content {
-        /* Reduce padding to give content more room */
         padding: 1rem 1rem;
     }
 
-    /* Make the title font smaller to fit on mobile */
     .site-branding h1 {
-        font-size: 1.5rem; /* Reduced from 2rem */
-        letter-spacing: 1px; /* Slightly reduce letter spacing */
+        font-size: 1.5rem;
+        letter-spacing: 1px;
     }
 
-    /* Ensure the hamburger button doesn't shrink */
     .hamburger {
         display: block;
         flex-shrink: 0;
@@ -359,17 +358,25 @@ footer .disclaimer {
         border-top: 1px solid #222;
         width: 100%;
     }
-    
+
     #nav-links a {
         font-size: 1.2rem;
     }
 
     /* --- ACTIVE STATE (when menu is open) --- */
 
-    body.nav-open .hamburger .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    body.nav-open .hamburger .bar:nth-child(2) { opacity: 0; }
-    body.nav-open .hamburger .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-    
+    body.nav-open .hamburger .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    body.nav-open .hamburger .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    body.nav-open .hamburger .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     body.nav-open #nav-links {
         max-height: 500px;
     }

@@ -49,14 +49,14 @@
 .difficulty-bar {
     display: flex;
     gap: 2px;
-    width: 50px; /* Fixed width for the bar */
+    width: 50px;
     height: 8px;
     margin: 4px auto 0;
 }
 
 .difficulty-bar span {
     flex-grow: 1;
-    background-color: #444; /* Default inactive color */
+    background-color: #444;
 }
 
 /* Color the bars based on difficulty level */
