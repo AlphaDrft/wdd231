@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF--8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summoner's Index - League of Legends Champions</title>
     <meta name="description"
@@ -20,18 +20,16 @@
 
 <body>
     <header>
-        <div class="header-content">
-            <a href="index.html" class="site-branding">
-                <img src="images/index-logo.svg" alt="Summoner's Index Logo">
-                <h1>Summoner's Index</h1>
-            </a>
-            <nav id="main-nav">
-                <div id="hamburger-btn" class="hamburger" aria-label="Open navigation menu" role="button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul id="nav-links">
+        <div class="header-container">
+            <div class="header-top">
+                <a href="index.html" class="site-branding">
+                    <img src="images/index-logo.svg" alt="Summoner's Index Logo">
+                    <h1>Summoner's Index</h1>
+                </a>
+                <button id="menu" class="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+            </div>
+            <nav class="main-nav">
+                <ul id="nav-links" class="nav-list">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
@@ -40,6 +38,9 @@
     </header>
 
         <main>
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="Search by champion name...">
+            </div>
             <div id="role-filters" class="role-filters"></div>
             <h2 class="section-title">
                 Champion Roster

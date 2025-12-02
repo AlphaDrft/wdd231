@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summoner's Index - About</title>
+    <meta name="description" content="Learn more about Summoner's Index project and provide feedback.">
+    <meta name="author" content="Andrei Enos Flores Villapaz">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/filter.css">
+    <link rel="icon" href="images/index-logo.svg" type="image/svg+xml">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <a href="index.html" class="site-branding">
+                    <img src="images/index-logo.svg" alt="Summoner's Index Logo">
+                    <h1>Summoner's Index</h1>
+                </a>
+                <button id="menu" class="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+            </div>
+            <nav class="main-nav">
+                <ul id="nav-links" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Summoner's Index</h2>
+                <p>This website was created as a project for WDD 231. The goal was to build a dynamic, modern web
+                    application using vanilla JavaScript, HTML, and CSS. It demonstrates key web development skills
+                    including fetching data from a JSON file, dynamic DOM manipulation, using local storage to save user
+                    preferences, and building a fully responsive, mobile-first design.</p>
+            </div>
+            <div class="about-form">
+                <h3>Feedback Form</h3>
+                <p>Have a suggestion or found a bug? Let us know!</p>
+                <form action="thanks.html" method="get" class="feedback-form">
+                    <label for="user-name">Your Name:</label>
+                    <input type="text" id="user-name" name="username" required placeholder="e.g., Jane Doe">
+
+                    <label for="user-email">Your Email:</label>
+                    <input type="email" id="user-email" name="useremail" required
+                        placeholder="e.g., jane.doe@example.com">
+
+                    <label for="user-message">Message:</label>
+                    <textarea id="user-message" name="message" rows="5" required
+                        placeholder="Your feedback is valuable..."></textarea>
+
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> &bull; Summoner's Index &bull; WDD 213 Project</p>
+        <p class="disclaimer">This site is a student project and is not affiliated with Riot Games.</p>
+    </footer>
+</body>
+
+</html>

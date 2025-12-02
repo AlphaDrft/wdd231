@@ -69,3 +69,29 @@
 .difficulty-bar.high span:nth-child(-n+3) {
     background-color: var(--accent-gold);
 }
+
+/* === SEARCH BAR STYLING === */
+.search-container {
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: #010a13;
+    border: 1px solid #444;
+    color: var(--text-color);
+    border-radius: 50px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-input:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(200, 155, 60, 0.5);
+    outline: none;
+}
