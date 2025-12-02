@@ -493,17 +493,21 @@ footer .disclaimer {
         justify-content: space-between;
         align-items: center;
     }
+
     .site-branding h1 {
         font-size: 2rem;
         letter-spacing: 2px;
     }
+
     .menu-btn {
         display: none;
     }
+
     .main-nav {
         margin-top: 0;
         width: auto;
     }
+
     .nav-list {
         display: flex;
         flex-direction: row;
@@ -511,6 +515,7 @@ footer .disclaimer {
         max-height: none;
         overflow: visible;
     }
+
     .nav-list a {
         background: none;
         padding: 0.5rem 0;
@@ -519,15 +524,18 @@ footer .disclaimer {
         margin-top: 0;
         border-bottom: 2px solid transparent;
     }
+
     .nav-list a:hover {
         background: none;
         border-bottom-color: var(--accent-gold);
     }
+
     .nav-list a.active {
         background: none;
         color: var(--accent-gold);
         border-bottom-color: var(--accent-gold);
     }
+
     .about-container {
         flex-direction: row;
         gap: 3rem;

@@ -8,14 +8,14 @@ const modalContent = document.getElementById('modal-content');
 const modalCloseBtn = document.getElementById('modal-close-btn');
 const filterBtn = document.getElementById('filter-favorites-btn');
 const roleFiltersContainer = document.getElementById('role-filters');
-const searchInput = document.getElementById('search-input'); 
+const searchInput = document.getElementById('search-input');
 
 // --- Global State ---
 let championsData = [];
 let favorites = [];
 let isFavoritesViewActive = false;
 let activeRoleFilter = 'all';
-let activeSearchQuery = ''; 
+let activeSearchQuery = '';
 
 // --- Reusable Functions --- //
 
@@ -104,7 +104,7 @@ const getChampionData = async () => {
         championsData = await response.json();
     } catch (error) {
         console.error("Could not fetch champion data:", error);
-        if(championGrid) championGrid.innerHTML = '<p class="error-message">Could not load champion data.</p>';
+        if (championGrid) championGrid.innerHTML = '<p class="error-message">Could not load champion data.</p>';
     }
 };
 

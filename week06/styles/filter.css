@@ -63,9 +63,11 @@
 .difficulty-bar.low span:nth-child(1) {
     background-color: var(--accent-gold);
 }
+
 .difficulty-bar.moderate span:nth-child(-n+2) {
     background-color: var(--accent-gold);
 }
+
 .difficulty-bar.high span:nth-child(-n+3) {
     background-color: var(--accent-gold);
 }
